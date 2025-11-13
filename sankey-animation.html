@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sankey step-through demo</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sankey-step-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .sankey-step-visible {
+      opacity: 1;
+      transition: opacity 400ms ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div id="sankey-container">
+    <svg height="600" width="1000" xmlns="http://www.w3.org/2000/svg">
+      <title>Your Diagram Title</title>
+      <!-- Generated with SankeyMATIC: 11/13/2025, 2:21:15 PM -->
+      <rect height="600" width="1000" fill="#ffffff"></rect>
+      <g transform="translate(12,18)">
+        <g id="sankey_flows">
+          <path id="flow5" d="M12 366.74684C160.51901 366.74684 254.32048 485.725 402.83949 485.725" fill="none" stroke-width="152.55" stroke="#D32F2F" opacity="0.7"><title>Received → Rejected by Drop Rule: 54,000</title></path>
+          <path id="flow7" d="M414.83949 409.45v152.55L916.35652 562v-152.55z" fill="#6B7280" stroke-width="0.5" stroke="#6B7280" opacity="0.7"><title>Rejected by Drop Rule → Trash: 54,000</title></path>
+          <path id="flow0" d="M12 225.49684C104.52944 225.49684 162.96909 152.76938 255.49853 152.76938" fill="none" stroke-width="129.95" stroke="#7AA7FF" opacity="0.7"><title>Received → Accepted for Matching: 46,000</title></path>
+          <path id="flow2" d="M267.49853 154.18188C339.95683 154.18188 385.71996 198.17687 458.17826 198.17687" fill="none" stroke-width="127.125" stroke="#2F6DF6" opacity="0.7"><title>Accepted for Matching → Refined: 45,000</title></path>
+          <path id="flow4" d="M470.17826 219.36437C529.44964 219.36437 566.8842 323.93482 626.15558 323.93482" fill="none" stroke-width="84.75" stroke="#D32F2F" opacity="0.7"><title>Refined → Drop Raw: 30,000</title></path>
+          <path id="flow6" d="M638.15558 323.93482C743.87194 323.93482 810.64016 367.075 916.35652 367.075" fill="none" stroke-width="84.75" stroke="#6B7280" opacity="0.7"><title>Drop Raw → Trash: 30,000</title></path>
+          <path id="flow3" d="M470.17826 155.80187C639.726 155.80187 746.80878 127.26253 916.35652 127.26253" fill="none" stroke-width="42.375" stroke="#1747CC" opacity="0.7"><title>Refined → Stored: 15,000</title></path>
+          <path id="flow1" d="M267.49853 89.20688C514.06456 89.20688 669.79048 104.66253 916.35652 104.66253" fill="none" stroke-width="2.825" stroke="#1747CC" opacity="0.7"><title>Accepted for Matching → Stored: 1,000</title></path>
+        </g>
+        <g id="sankey_nodes">
+          <g class="node">
+            <rect id="r0" class="for_r0" x="0" y="187.17496" height="282.5" width="12" fill="#64748B" fill-opacity="1" transform="translate(0,-26.65312)"><title>Received:
+100,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r1" class="for_r1" x="229.08913" y="130.60621" height="129.95" width="12" fill="#7AA7FF" fill-opacity="1" transform="translate(26.4094,-42.81183)"><title>Accepted for Matching:
+46,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r2" class="for_r2" x="458.17826" y="134.61437" height="127.125" width="12" fill="#2F6DF6" fill-opacity="1"><title>Refined:
+45,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r3" class="for_r3" x="687.26739" y="42.89813" height="45.2" width="12" fill="#1747CC" fill-opacity="1" transform="translate(229.08913,60.3519)"><title>Stored:
+16,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r4" class="for_r4" x="687.26739" y="382.47313" height="152.55" width="12" fill="#D32F2F" fill-opacity="1" transform="translate(-284.4279,26.97687)"><title>Rejected by Drop Rule:
+54,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r5" class="for_r5" x="687.26739" y="192.91063" height="84.75" width="12" fill="#D32F2F" fill-opacity="1" transform="translate(-61.11182,88.64919)"><title>Drop Raw:
+30,000</title></rect>
+          </g>
+          <g class="node">
+            <rect id="r6" class="for_r6" x="916.35652" y="260.22522" height="237.3" width="12" fill="#6B7280" fill-opacity="1" transform="translate(0,64.47478)"><title>Trash:
+84,000</title></rect>
+          </g>
+        </g>
+        <g id="sankey_labels" font-family="sans-serif" font-size="16px" fill="#000000">
+          <rect id="label0_bg" class="for_r0" x="13.6327" y="317.66497" width="69.77641" height="20.8" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(0,-26.65312)"></rect>
+          <text id="label0" class="for_r0" text-anchor="start" x="18.29754" y="328.42496" font-weight="400" font-size="14.4px" dy="4.64" transform="translate(0,-26.65312)">Received</text>
+          <rect id="label1_bg" class="for_r1" x="242.72183" y="184.8749" width="153.01077" height="20.98515" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(26.4094,-42.81183)"></rect>
+          <text id="label1" class="for_r1" text-anchor="start" x="247.38667" y="195.58121" font-weight="400" font-size="14.4px" dy="4.69369" transform="translate(26.4094,-42.81183)">Accepted for Matching</text>
+          <rect id="label2_bg" class="for_r2" x="471.81096" y="187.41686" width="59.37019" height="20.8" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+          <text id="label2" class="for_r2" text-anchor="start" x="476.4758" y="198.17687" font-weight="400" font-size="14.4px" dy="4.64">Refined</text>
+          <rect id="label3_bg" class="for_r3" x="700.9001" y="54.73813" width="52.16703" height="20.8" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(229.08913,60.3519)"></rect>
+          <text id="label3" class="for_r3" text-anchor="start" x="705.56493" y="65.49813" font-weight="400" font-size="14.4px" dy="4.64" transform="translate(229.08913,60.3519)">Stored</text>
+          <rect id="label4_bg" class="for_r4" x="700.9001" y="448.01327" width="154.60453" height="20.8867" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-284.4279,26.97687)"></rect>
+          <text id="label4" class="for_r4" text-anchor="start" x="705.56493" y="458.74813" font-weight="400" font-size="14.4px" dy="4.66514" transform="translate(-284.4279,26.97687)">Rejected by Drop Rule</text>
+          <rect id="label5_bg" class="for_r5" x="700.9001" y="224.5263" width="73.76078" height="20.80235" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(-61.11182,88.64919)"></rect>
+          <text id="label5" class="for_r5" text-anchor="start" x="705.56493" y="235.28563" font-weight="400" font-size="14.4px" dy="4.64067" transform="translate(-61.11182,88.64919)">Drop Raw</text>
+          <rect id="label6_bg" class="for_r6" x="929.98921" y="368.11523" width="46.01078" height="20.8" rx="4" fill="#fff" fill-opacity="0.75" stroke="none" stroke-width="0" stroke-opacity="0" transform="translate(0,64.47478)"></rect>
+          <text id="label6" class="for_r6" text-anchor="start" x="934.65406" y="378.87522" font-weight="400" font-size="14.4px" dy="4.64" transform="translate(0,64.47478)">Trash</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+       // Phases (0-based):
+      // 0: Received only
+      // 1: red drop rule path to Trash
+      // 2: Accepted for Matching node + Received→Accepted
+      // 3: Accepted→Stored + Stored node
+      // 4: Refined lane (up to Drop Raw)
+      // 5: Drop Raw → Trash
+      // 6: Refined → Stored
+      const phases = [
+        // Phase 0
+        ['#r0', '#label0_bg', '#label0'],
+
+        // Phase 1 – red series to Rejected
+        ['#r4', '#label4_bg', '#label4',
+         '#flow5'],
+
+        // Phase - rejected to trash
+         ['#r6', '#label6_bg', '#label6',
+         '#flow7'],
+
+        // Phase 2 – Accepted for Matching appears
+        ['#r1', '#label1_bg', '#label1',
+         '#flow0'],
+
+        // Phase 3 – its tiny Stored leg
+        ['#r3', '#label3_bg', '#label3',
+         '#flow1'],
+
+        // Phase 4 – Accepted for Matching → Refined
+        ['#r2', '#label2_bg', '#label2',
+         '#flow2'],
+
+        // Phase 6 – Refined → Stored
+        ['#flow3'],
+
+        // Phase  Refined → Drop Raw
+        ['#r5', '#label5_bg', '#label5',
+         '#flow4'],
+
+        // Phase 5 – Drop Raw → Trash
+        ['#flow6'],
+      ];
+
+      // Collect all elements involved in any phase
+      const allPhaseSelectors = Array.from(new Set(phases.flat()));
+      const allPhaseElements = allPhaseSelectors
+        .map(sel => Array.from(document.querySelectorAll(sel)))
+        .flat();
+
+      // Hide them all initially
+      allPhaseElements.forEach(el => {
+        el.classList.add('sankey-step-hidden');
+        el.classList.remove('sankey-step-visible');
+      });
+
+      let currentPhase = 0;
+
+      function showPhase(index) {
+        if (index < 0 || index >= phases.length) return;
+        phases[index].forEach(sel => {
+          document.querySelectorAll(sel).forEach(el => {
+            el.classList.remove('sankey-step-hidden');
+            el.classList.add('sankey-step-visible');
+          });
+        });
+      }
+
+      // Show Phase 0 immediately (Received only)
+      showPhase(currentPhase);
+
+      const container = document.getElementById('sankey-container') || document.querySelector('svg');
+
+      container.addEventListener('click', function () {
+        if (currentPhase >= phases.length - 1) {
+          // Stop at final state; uncomment to allow reset:
+          // currentPhase = 0;
+          // allPhaseElements.forEach(el => el.classList.add('sankey-step-hidden'));
+          // showPhase(currentPhase);
+          return;
+        }
+        currentPhase += 1;
+        showPhase(currentPhase);
+      });
+    });
+  </script>
+</body>
+</html>
